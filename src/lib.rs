@@ -2,6 +2,7 @@ mod counter;
 mod button;
 mod barrier;
 
+use wasm_bindgen::prelude::*;
 use yew::prelude::*;
 use counter::{Color, Counter};
 use barrier::Barrier;
@@ -76,4 +77,9 @@ impl Model {
             }
         }
     }
+}
+
+#[wasm_bindgen(start)]
+pub fn run_app() {
+    App::<Model>::new().mount_to_body();
 }
