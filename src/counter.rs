@@ -1,5 +1,6 @@
-use yew::{ComponentLink, Callback, Component, ShouldRender, Html};
+use yew::prelude::*;
 
+#[derive(PartialEq, Clone)]
 pub enum Color {
     Red,
     Green,
@@ -68,7 +69,7 @@ impl Component for Counter {
         html! {
             <div class="counter">
                 <p>{ self.value }</p>
-                <button style=colorize onlick=self.link.onclick(|_| Msg::Increase)>
+                <button style=colorize onclick=self.link.callback(|_| Msg::Increase)>
                     { "Increase internal counter" }
                 </button>
             </div>

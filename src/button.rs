@@ -1,4 +1,4 @@
-use yew::{ComponentLink, Callback, Component, ShouldRender, Html};
+use yew::prelude::*;
 
 pub struct Button {
     link: ComponentLink<Self>,

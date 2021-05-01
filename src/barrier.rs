@@ -1,4 +1,4 @@
-use yew::{ComponentLink, Callback, Component, ShouldRender, Html};
+use yew::prelude::*;
 use crate::button::Button;
 
 pub struct Barrier {
